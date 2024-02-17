@@ -1,0 +1,158 @@
+<!--By Najeeb Fariduddin Saiyed - 21070126057 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Set the font family for better readability */
+            background-color: #f4f4f4; /* Set the background color */
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            max-width: 400px; /* Set the maximum width of the form */
+            margin: 15px auto; /* Center the form horizontally with some margin */
+            /* The 'auto' automatically sets margin on horizontal axis */
+            /* And 20px adds 20 px margin from top and bottom*/
+            background-color: #fff; /* Set the background color of the form */
+            padding: 20px; /* Add some padding inside the form */
+            border-radius: 8px; /* Add rounded corners to the form */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+            /* 0 represents the horizontal offset of shadow from horizontal offset (0 represents no offset*/
+            /* next 0 represents vertical offset and 0 represents no offset*/
+            /* 10px represents the blur radius of the shadow*/
+            /* rgba(0, 0, 0, 0.1): This value specifies the color and opacity of the shadow. */
+            /* The first three values (0, 0, 0) represent the color black (RGB values) */
+            /* the fourth value 0.1 represents the opacity of the shadow, where 0 is fully transparent and 1 is fully opaque */
+        }
+
+        h2 {
+            color: #2ecc71; /* Set the color of heading 2 */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px; /* Add some margin below each label */
+        }
+
+        input,
+        select,
+        button {
+            width: 100%; /* Make the inputs, select, and button full width */
+            padding: 8px; /* Add padding inside these elements */
+            margin-bottom: 7px; /* Add margin at the bottom for spacing */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            border: 1px solid #ccc; /* Add a border to these elements */
+            border-radius: 4px; /* Add rounded corners */
+        }
+
+        button {
+            background-color: #2ecc71; /* Set the background color of the button */
+            color: #fff; /* Set the text color of the button */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+
+        button:hover {
+            background-color: #27ae60; /* Change button background color on hover */
+        }
+    </style>
+</head>
+<body>
+    <form id="registrationForm" action="#" method="post">
+        <h2>Registration Form</h2>
+
+        <!-- Full Name -->
+        <label for="firstName">First Name:</label> <!-- Label for the first name input field -->
+        <input type="text" id="firstName" name="firstName" required> <!-- Input field for the first name -->
+        <!-- The id attribute (id="firstName") uniquely identifies the input element within the HTML document.  -->
+        <!-- It can be used to target this specific input element with CSS or JavaScript. -->
+
+        <!-- The name attribute (name="firstName") identifies the input field's name when the form containing this input is submitted. -->
+        <!-- When the form data is sent to the server, the value entered in this field will be associated with the name "firstName" in the request parameters.  -->
+
+        <br>
+
+        <label for="lastName">Last Name:</label> <!-- Label for the last name input field -->
+        <input type="text" id="lastName" name="lastName" required> <!-- Input field for the last name -->
+
+        <br>
+
+        <!-- Email -->
+        <label for="email">Email Address:</label> <!-- Label for the email input field -->
+        <input type="email" id="email" name="email" required> <!-- Input field for the email -->
+
+        <br>
+
+        <!-- Password -->
+        <label for="password">Password:</label> <!-- Label for the password input field -->
+        <input type="password" id="password" name="password" required> <!-- Input field for the password -->
+
+        <br>
+
+        <label for="confirmPassword">Confirm Password:</label> <!-- Label for the confirm password input field -->
+        <input type="password" id="confirmPassword" name="confirmPassword" required> <!-- Input field for confirming password -->
+
+        <br>
+
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth:</label> <!-- Label for the date of birth input field -->
+        <input type="date" id="dob" name="dob" required> <!-- Input field for the date of birth -->
+
+        <br>
+
+        <!-- Gender -->
+        <label for="gender">Gender:</label> <!-- Label for the gender select dropdown -->
+        <select id="gender" name="gender" required> <!-- Select dropdown for gender selection -->
+            <option value="">Select...</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <br>
+
+        <!-- Country -->
+        <label for="country">Country:</label> <!-- Label for the country select dropdown -->
+        <select id="country" name="country" required>
+            <option value="">Select...</option>
+            <option value="afghanistan">Afghanistan</option>
+            <option value="australia">Australia</option>
+            <option value="brazil">Brazil</option>
+            <option value="canada">Canada</option>
+            <option value="china">China</option>
+            <option value="france">France</option>
+            <option value="germany">Germany</option>
+            <option value="india">India</option>
+            <option value="italy">Italy</option>
+            <option value="japan">Japan</option>
+            <option value="mexico">Mexico</option>
+            <option value="russia">Russia</option>
+            <option value="southafrica">South Africa</option>
+            <option value="spain">Spain</option>
+            <option value="switzerland">Switzerland</option>
+            <option value="unitedarabemirates">United Arab Emirates</option>
+            <option value="southkorea">South Korea</option>
+            <option value="newzealand">New Zealand</option>
+            <option value="singapore">Singapore</option>
+        </select>        
+        <br>
+
+        <!-- Profile Picture -->
+        <label for="profilePicture">Profile Picture:</label> <!-- Label for the profile picture input field -->
+        <input type="file" id="profilePicture" name="profilePicture" accept="image/*"> <!-- Input field for uploading profile picture -->
+
+        <!-- The accept="image/*" attribute restricts file selection to only image files. The asterisk (*) is a wildcard character that matches any file extension. So, image/* will accept any image file type, such as JPEG, PNG, GIF, etc.
+
+        If you want to further restrict the accepted file types, you can specify them explicitly. For example, accept="image/jpeg, image/png" would only allow JPEG and PNG image files to be selected. -->
+
+        <br>
+
+        <button type="submit">Register</button> <!-- Submit button for registering -->
+    </form>
+</body>
+</html>
+<!--By Najeeb Fariduddin Saiyed - 21070126057 -->
